@@ -42,25 +42,36 @@
 
         .row div {
             display: grid;
+            position: relative;
             align-items: center;
             width: 160px;
             height: 160px;
         }
 
-        .row:first-child div:first-child, .row:nth-child(2) div:last-child, .row:last-child div:first-child {
+        .row:first-child div:first-child,
+        .row:nth-child(2) div:last-child,
+        .row:last-child div:first-child {
             background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
             background-size: cover;
             background-position: center;
             color: white;
         }
 
-        .row:first-child div:last-child, .row:nth-child(2) div:first-child, .row:last-child div:last-child {
+        .row:first-child div:last-child,
+        .row:nth-child(2) div:first-child,
+        .row:last-child div:last-child {
             background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightred.png");
             background-size: cover;
             background-position: center;
             color: tomato;
         }
+
+        .done::after {
+            left: 15%;
+        }
     </style>
+    <link rel="stylesheet" type="text/css"
+        href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/sparta-bucket2.css">
 </head>
 
 <body>
@@ -69,7 +80,7 @@
     <section class="boxes">
         <div class="row">
             <div>다이어트 7kg 감량</div>
-            <div>개발 공부하기</div>
+            <div class="done">개발 공부하기</div>
         </div>
         <div class="row">
             <div>운동 꾸준히 하기</div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 Bucket List</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Hahmlet', serif;
+        }
+
+        body {
+            width: 360px;
+            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bg-grid.png");
+            object-fit: cover;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .title {
+            background-color: tan;
+            color: white;
+            font-size: 24px;
+            padding: 4px 14px;
+            border-radius: 8px;
+        }
+
+        .msg {
+            font-weight: bold;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+        }
+
+        .row div {
+            display: grid;
+            align-items: center;
+            width: 160px;
+            height: 160px;
+        }
+
+        .row:first-child div:first-child, .row:nth-child(2) div:last-child, .row:last-child div:first-child {
+            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .row:first-child div:last-child, .row:nth-child(2) div:first-child, .row:last-child div:last-child {
+            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightred.png");
+            background-size: cover;
+            background-position: center;
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">2023 신년계획</h1>
+    <p class="msg">올해도 하는데까지 해보자</p>
+    <section class="boxes">
+        <div class="row">
+            <div>다이어트 7kg 감량</div>
+            <div>개발 공부하기</div>
+        </div>
+        <div class="row">
+            <div>운동 꾸준히 하기</div>
+            <div>라온이 잘 키우기</div>
+        </div>
+        <div class="row">
+            <div>의철이랑 안싸우기</div>
+            <div>돈 많이 벌기</div>
+        </div>
+    </section>
+</body>
+
+</html>

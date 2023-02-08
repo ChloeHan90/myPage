@@ -13,6 +13,16 @@
         crossorigin="anonymous"></script>
 
     <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <script>
+        $(document).ready(function () {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+                let temp = data['temp'];
+                $('#temp').empty();
+                let temp_html = `<span id="temp">${temp}</span>`;
+                $('#temp').append(temp_html);
+            })
+        })
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
@@ -80,7 +90,8 @@
     <div class="wrap">
         <div class="titleBox">
             <h1>내 생의 최고의 영화들</h1>
-            <button>영화 기록하기</button>
+            <div>현재 서울의 날씨 : <span id="temp">20</span>도</div>
+            <button onClick="hey()">영화 기록하기</button>
         </div>
         <div class="postBox">
             <div class="form-floating mb-3">
